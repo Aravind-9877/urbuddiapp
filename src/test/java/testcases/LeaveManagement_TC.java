@@ -19,14 +19,14 @@ public class LeaveManagement_TC extends BaseClass {
 		LeaveManagementPage mylvepage = new LeaveManagementPage(getDriver());
 		
 		mylvepage.applyleave();
-		mylvepage.btnlop();
-		mylvepage.fromdate("1404");
-		mylvepage.todate("1404");
-		mylvepage.subjecttxt("babluneelms_leave");
-		mylvepage.reasontxt("sickleave");
-		mylvepage.lverdbtn();
+		mylvepage.btnLop();
+		mylvepage.fromDate("1404");
+		mylvepage.toDate("1404");
+		mylvepage.subjectTxt("babluneelms_leave");
+		mylvepage.reasonTxt("sickleave");
+		mylvepage.leaveBtn();
 		Thread.sleep(2000);
-		mylvepage.submitbtn();
+		mylvepage.submitBtn();
 		
 		
 		

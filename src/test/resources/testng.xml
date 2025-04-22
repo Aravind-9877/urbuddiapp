@@ -17,9 +17,10 @@
         <parameter name="os" value="windows"/>
         <parameter name="browser" value="chrome"/>
         <classes>
-           <class name="testcases.AddEmployees_TC"/>
-            <!--<class name="testcases.LeaveManagement_TC"/>-->         
-            <!-- Add more classes as needed -->
+        <class name="testcases.AddEmployees_TC"/>
+            <!--<class name="testcases.LeaveApproval_TC"/>-->
+            <class name="testcases.LeaveManagement_TC"/>
+
         </classes>
     </test>
 </suite>

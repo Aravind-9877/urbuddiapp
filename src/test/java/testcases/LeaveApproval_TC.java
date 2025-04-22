@@ -7,7 +7,7 @@ import pageobjects.LeaveApprovalPage;
 public class LeaveApproval_TC extends BaseClass {
 	
 	
-	@Test
+	@Test(priority = 1,groups = "Regression")
 	public void leaveApproval() {
 		
 		DashboardPage mydb = new DashboardPage(getDriver());

@@ -41,32 +41,32 @@ public class LeaveManagementPage extends BasePage {
 		 btnApplyLeave.click();
 		 
 	 }
-	 public void fromdate(String frmdte) {
+	 public void fromDate(String frmdte) {
 		 fromDate.sendKeys(frmdte);
 	 }
-	 public void todate(String todte) {
+	 public void toDate(String todte) {
 		 toDate.sendKeys(todte);
 	 }
-	 public void subjecttxt(String subject) {
+	 public void subjectTxt(String subject) {
 		 txtSubject.sendKeys(subject);
 	 }
-	 public void reasontxt(String reason) {
+	 public void reasonTxt(String reason) {
 		 txtReason.sendKeys(reason);
 	 }
-	 public void leaddrpdwn() {
+	 public void leadDrpdwn() {
 		 System.out.println(dropdownLead.getText());
 	 }
-	 public void lverdbtn() {
+	 public void leaveBtn() {
 		 rdBtnleave.click();
 	 }
-	 public void submitbtn() {
+	 public void submitBtn() {
 		 Actions myact = new Actions(driver);
 		 myact.moveToElement(btnSubmit);
 		 JavascriptExecutor js = (JavascriptExecutor) driver;
 		 js.executeScript("arguments[0].click();",btnSubmit);
 		 btnSubmit.click();;
 	 }
-	  public void btnlop() throws InterruptedException   {
+	  public void btnLop() throws InterruptedException   {
 		  try {
 
 

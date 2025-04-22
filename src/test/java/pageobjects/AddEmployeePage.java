@@ -64,47 +64,47 @@ public class AddEmployeePage extends BasePage{
 		addEmployeBtn.click();
 	}
 	
-	public void firstNametxt(String firstName) {
+	public void firstNameTxt(String firstName) {
 		txtFirstName.sendKeys(firstName);
 	}
-	public void lastNametxt(String lastName) {
+	public void lastNameTxt(String lastName) {
 		txtLastName.sendKeys(lastName);
 	}
-	public void employeidtxt(String employeid) {
+	public void employeIdTxt(String employeid) {
 		txtEmployeeId.sendKeys(employeid);
 	}
-	public void emailtxt(String email) {
+	public void emailTxt(String email) {
 		String  em=txtEmail.getText();
 		txtEmail.sendKeys(email);
 		
 	}
-	public void dobele(String dobdate) {
+	public void dobEle(String dobdate) {
 		dob.sendKeys(dobdate);
 	}
-	public void joiningdteele(String joindate) {
+	public void joiningDateEle(String joindate) {
 		joiningdDate.sendKeys(joindate);
 	}
-	public void passwordtxt(String password) {
+	public void passwordTxt(String password) {
 		txtPassword.sendKeys(password);
 	}
 	
-	public void roledrpdwn(String value) {
+	public void roleDrpdwn(String value) {
 		Select myslct = new Select(drpdwnRole);
 		myslct.selectByValue(value);	
 	}
-	public void qualfctndrpdwn(String value) {
+	public void qualfctnDrpdwn(String value) {
 		Select myslct = new Select(drpdwnQualifications);
 		myslct.selectByValue(value);
 	}
-	public void drpdwngndr(String value) {
+	public void drpdwnGender(String value) {
 		Select myslct = new Select(drpdwnGender);
 		myslct.selectByValue(value);
 	}
-	public void bloodgrpdrpdwn(String value) {
+	public void bloodGroupDrpdwn(String value) {
 		Select myslct = new Select(drpdwnBloodGroup);
 		myslct.selectByValue(value);
 	}
-	public void reportingtopdwn(String value) {
+	public void reportingTodwn(String value) {
 		Select myslct = new Select(drpdwnReportingTo);
 		myslct.selectByValue(value);
 	
@@ -113,18 +113,18 @@ public class AddEmployeePage extends BasePage{
 	public void txtDept(String dept){
 		txtDeparment.sendKeys(dept);
 	}
-	public void txtdesgntn(String dsgntn) {
+	public void txtDesgntn(String dsgntn) {
 		txtDesignation.sendKeys(dsgntn);
 	}
-	public void txtmobilno(String mobilno) {
+	public void txtMobilNo(String mobilno) {
 		txtMobileNo.sendKeys(mobilno);
 		
 	}
-	public void txtloctn(String loc) {
+	public void txtLoctn(String loc) {
 		txtLocation.sendKeys(loc);
 		
 	}
-	public void certifictnchckbx() {
+	public void certifictnChckbx() {
 		chckbxCertifications.click();
 		chckbxDegree.click();
 	}
