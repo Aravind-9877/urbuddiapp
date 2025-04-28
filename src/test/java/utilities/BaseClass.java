@@ -1,4 +1,4 @@
-package testcases;
+package utilities;
 
 import java.io.File;
 import java.io.FileReader;
@@ -65,16 +65,9 @@ public class BaseClass {
 		getDriver().get(p.getProperty("appURL"));
 	}
 
-	@Test(groups = "Regression")
-	public void verifylogin() {
-		LoginPage mypage = new LoginPage(getDriver());
-		mypage.setTxtEmail(p.getProperty("userName"));
-		mypage.setPassword(p.getProperty("password"));
-		mypage.loginbtn();
-	}
 
 	@AfterClass(groups = "Regression")
-	public void teardown() {
+	public void tearDown() {
 		if (getDriver() != null) {
 			getDriver().quit();
 			tlocal.remove();

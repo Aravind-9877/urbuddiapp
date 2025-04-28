@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="Master" >
+<suite name="testngSuite" >
 
     <groups>
         <run>
@@ -17,9 +17,11 @@
         <parameter name="os" value="windows"/>
         <parameter name="browser" value="chrome"/>
         <classes>
-        <class name="testcases.AddEmployees_TC"/>
+       <class name="testcases.AddEmployees_TC"/>
+
+
+            <!--<class name="testcases.LeaveManagement_TC"/>-->
             <!--<class name="testcases.LeaveApproval_TC"/>-->
-            <class name="testcases.LeaveManagement_TC"/>
 
         </classes>
     </test>

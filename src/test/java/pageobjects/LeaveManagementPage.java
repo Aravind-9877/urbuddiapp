@@ -64,7 +64,7 @@ public class LeaveManagementPage extends BasePage {
 		 myact.moveToElement(btnSubmit);
 		 JavascriptExecutor js = (JavascriptExecutor) driver;
 		 js.executeScript("arguments[0].click();",btnSubmit);
-		 btnSubmit.click();;
+		 btnSubmit.click();
 	 }
 	  public void btnLop() throws InterruptedException   {
 		  try {

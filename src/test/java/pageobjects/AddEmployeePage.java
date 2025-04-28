@@ -17,7 +17,7 @@ public class AddEmployeePage extends BasePage{
 	
 	
 	@FindBy(xpath = "//button[text()='Add Employee']")
-	WebElement addEmployeBtn;
+	WebElement addEmployeeButton;
 	@FindBy(xpath = "//input[@name='firstName']")
 	WebElement txtFirstName;
 	@FindBy(xpath = "//input[@name='lastName']")
@@ -58,77 +58,77 @@ public class AddEmployeePage extends BasePage{
 	WebElement addBtn;
 	@FindBy(xpath="//input[@id='ag-39-input']")
 	WebElement checkemail;
-	@FindBy(xpath="//div[@class='ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value ag-cell-focus']")
+	@FindBy(xpath="//input[@id='ag-213-input']")
 	WebElement check;
 	public void addEmployee() {
-		addEmployeBtn.click();
+		addEmployeeButton.click();
 	}
 	
-	public void firstNameTxt(String firstName) {
+	public void setFirstName(String firstName) {
 		txtFirstName.sendKeys(firstName);
 	}
-	public void lastNameTxt(String lastName) {
+	public void setLastName(String lastName) {
 		txtLastName.sendKeys(lastName);
 	}
-	public void employeIdTxt(String employeid) {
+	public void setEmployeeId(String employeid) {
 		txtEmployeeId.sendKeys(employeid);
 	}
-	public void emailTxt(String email) {
+	public void setEmail(String email) {
 		String  em=txtEmail.getText();
 		txtEmail.sendKeys(email);
 		
 	}
-	public void dobEle(String dobdate) {
+	public void setDob(String dobdate) {
 		dob.sendKeys(dobdate);
 	}
-	public void joiningDateEle(String joindate) {
+	public void setJoiningDate(String joindate) {
 		joiningdDate.sendKeys(joindate);
 	}
-	public void passwordTxt(String password) {
+	public void setPassword(String password) {
 		txtPassword.sendKeys(password);
 	}
 	
-	public void roleDrpdwn(String value) {
+	public void selectRole(String value) {
 		Select myslct = new Select(drpdwnRole);
-		myslct.selectByValue(value);	
+		myslct.selectByValue(value);
 	}
-	public void qualfctnDrpdwn(String value) {
+	public void selectQualification(String value) {
 		Select myslct = new Select(drpdwnQualifications);
 		myslct.selectByValue(value);
 	}
-	public void drpdwnGender(String value) {
+	public void selectGender(String value) {
 		Select myslct = new Select(drpdwnGender);
 		myslct.selectByValue(value);
 	}
-	public void bloodGroupDrpdwn(String value) {
+	public void selectBloodGroup(String value) {
 		Select myslct = new Select(drpdwnBloodGroup);
 		myslct.selectByValue(value);
 	}
-	public void reportingTodwn(String value) {
+	public void selectReportingTo(String value) {
 		Select myslct = new Select(drpdwnReportingTo);
 		myslct.selectByValue(value);
 	
 	}
 	
-	public void txtDept(String dept){
+	public void setDepartment(String dept){
 		txtDeparment.sendKeys(dept);
 	}
-	public void txtDesgntn(String dsgntn) {
+	public void setTxtDesignation(String dsgntn) {
 		txtDesignation.sendKeys(dsgntn);
 	}
-	public void txtMobilNo(String mobilno) {
+	public void setMobilNo(String mobilno) {
 		txtMobileNo.sendKeys(mobilno);
 		
 	}
-	public void txtLoctn(String loc) {
+	public void setLocation(String loc) {
 		txtLocation.sendKeys(loc);
 		
 	}
-	public void certifictnChckbx() {
+	public void clickCertificationCeckbox() {
 		chckbxCertifications.click();
 		chckbxDegree.click();
 	}
-	public void btnAdd() {
+	public void clickAddButton() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();",addBtn);
 		addBtn.click();;
@@ -137,7 +137,7 @@ public class AddEmployeePage extends BasePage{
 	public void setCheckemail() {
 		String em = txtEmail.getText();
 		checkemail.sendKeys(em);
-		String ele = check.getText();
+
 	}
 	
 	

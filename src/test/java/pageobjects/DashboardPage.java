@@ -12,7 +12,7 @@ public class DashboardPage extends BasePage{
 	}
 	
 	@FindBy(xpath="//p[text()='Employees'][@class='mt-4']")
-	WebElement employeestab;
+	WebElement employeesTab;
 	@FindBy(xpath="//p[text()='Leave Management']")
 	WebElement leavemangmnttab;
 	@FindBy(xpath="//p[text()='Payslip']")
@@ -34,7 +34,7 @@ public class DashboardPage extends BasePage{
 	
 	public void employees() {
 		
-		employeestab.click();
+		employeesTab.click();
 		
 	}
 	public void leavemngmnt() {
