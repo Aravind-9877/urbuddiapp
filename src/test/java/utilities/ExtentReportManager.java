@@ -9,6 +9,8 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import java.awt.*;
+import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -75,6 +77,21 @@ public void onTestSkipped(ITestResult result){
 }
 public void onFinish(ITestContext testContext){
 extent.flush();
+
+String pathOfExtentReport = System.getProperty("user.dir")+"\\reports\\"+repName;
+File extentReport = new File(pathOfExtentReport);
+try{
+    Desktop.getDesktop().browse(extentReport.toURI());
+
+
+}
+catch(Exception e){
+    e.printStackTrace();
+
+
+}
+
+
 
 
 }

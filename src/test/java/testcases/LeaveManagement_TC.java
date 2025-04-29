@@ -1,5 +1,6 @@
 package testcases;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageobjects.DashboardPage;
 import pageobjects.LeaveManagementPage;
@@ -8,11 +9,11 @@ import utilities.BaseClass;
 
 public class LeaveManagement_TC extends BaseClass {
 	@Test(groups = "Regression")
-	public void verifylogin() {
-		LoginPage mypage = new LoginPage(getDriver());
-		mypage.setTxtEmail(p.getProperty("userName2"));
-		mypage.setPassword(p.getProperty("password2"));
-		mypage.loginBtn();
+	public void verifyLogin() {
+		LoginPage myPage = new LoginPage(getDriver());
+		myPage.setTxtEmail(p.getProperty("userName2"));
+		myPage.setPassword(p.getProperty("password2"));
+		myPage.loginBtn();
 	}
 	
 	@Test(priority = 1,groups = "Regression")
@@ -23,20 +24,21 @@ public class LeaveManagement_TC extends BaseClass {
 		myDbPage.leavemngmnt();
 
 		
-		LeaveManagementPage mylvepage = new LeaveManagementPage(getDriver());
-		
-		mylvepage.applyleave();
-		mylvepage.btnLop();
-		mylvepage.fromDate("2804");
+		LeaveManagementPage myLeavePage = new LeaveManagementPage(getDriver());
 
-		mylvepage.toDate("2804");
-		mylvepage.subjectTxt("babluneelms_leave");
-		mylvepage.reasonTxt("sickleave");
-		mylvepage.leaveBtn();
+		myLeavePage.applyleave();
+		myLeavePage.btnLop();
+		myLeavePage.fromDate("2804");
+
+		myLeavePage.toDate("2804");
+		myLeavePage.subjectTxt("babluneelms_leave");
+		myLeavePage.reasonTxt("sickleave");
+		myLeavePage.leaveBtn();
 		Thread.sleep(2000);
-		mylvepage.submitBtn();
+		myLeavePage.submitBtn();
 		Thread.sleep(2000);
 		captureScreen("leavesubmission");
+
 		
 		
 	}
