@@ -91,7 +91,15 @@ catch(Exception e){
 
 }
 
+    // ✅ Send email with the report attached
+    String subject = "Test Automation Execution Report";
+    String body = "Test Execution completed.\n\nPlease find the attached Report.\n\nTestCaseSummary:\n"
+            + "Passed ✅: " + testContext.getPassedTests().size() + "\n"
+            + "Failed ❌: " + testContext.getFailedTests().size() + "\n"
+            + "Skipped ⚠: " + testContext.getSkippedTests().size();
 
+    // Send the email
+    EmailUtility.sendEmail(subject, body, pathOfExtentReport);
 
 
 }

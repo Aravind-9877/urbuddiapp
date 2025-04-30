@@ -20,8 +20,8 @@
        <class name="testcases.AddEmployees_TC"/>
 
 
-            <!--<class name="testcases.LeaveManagement_TC"/>-->
-            <!--<class name="testcases.LeaveApproval_TC"/>-->
+           <!-- <class name="testcases.LeaveManagement_TC"/>-->
+           <!-- <class name="testcases.LeaveApproval_TC"/>-->
 
         </classes>
     </test>

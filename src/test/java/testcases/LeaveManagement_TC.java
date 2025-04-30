@@ -6,13 +6,15 @@ import pageobjects.DashboardPage;
 import pageobjects.LeaveManagementPage;
 import pageobjects.LoginPage;
 import utilities.BaseClass;
+import utilities.ConfigPropertiesClass;
 
 public class LeaveManagement_TC extends BaseClass {
 	@Test(groups = "Regression")
 	public void verifyLogin() {
+		getDriver().get(ConfigPropertiesClass.getProperty("appURL"));
 		LoginPage myPage = new LoginPage(getDriver());
-		myPage.setTxtEmail(p.getProperty("userName2"));
-		myPage.setPassword(p.getProperty("password2"));
+		myPage.setTxtEmail(ConfigPropertiesClass.getProperty("userName2"));
+		myPage.setPassword(ConfigPropertiesClass.getProperty("password2"));
 		myPage.loginBtn();
 	}
 	

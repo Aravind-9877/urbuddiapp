@@ -5,14 +5,16 @@ import pageobjects.DashboardPage;
 import pageobjects.LeaveApprovalPage;
 import pageobjects.LoginPage;
 import utilities.BaseClass;
+import utilities.ConfigPropertiesClass;
 
 public class LeaveApproval_TC extends BaseClass {
 
 	@Test(groups = "Regression")
 	public void verifylogin() {
+		getDriver().get(ConfigPropertiesClass.getProperty("appURL"));
 		LoginPage mypage = new LoginPage(getDriver());
-		mypage.setTxtEmail(p.getProperty("userName3"));
-		mypage.setPassword(p.getProperty("password3"));
+		mypage.setTxtEmail(ConfigPropertiesClass.getProperty("userName3"));
+		mypage.setPassword(ConfigPropertiesClass.getProperty("password3"));
 		mypage.loginBtn();
 	}
 	@Test(priority = 1,groups = "Regression")

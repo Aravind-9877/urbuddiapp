@@ -31,13 +31,7 @@ public class BaseClass {
 	@BeforeClass(groups = "Regression")
 	@Parameters({"os", "browser"})
 	public void setup(String os, String browser) throws IOException {
-		// Load config.properties file
-		FileReader file = new FileReader("./src/test/resources/config.properties");
-		p = new Properties();
-		p.load(file);
-
-		WebDriver driver = null;
-
+			WebDriver driver = null;
 		// Browser setup
 		switch (browser.toLowerCase()) {
 			case "chrome":
@@ -62,7 +56,7 @@ public class BaseClass {
 		// Common driver setup
 		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		getDriver().manage().window().maximize();
-		getDriver().get(p.getProperty("appURL"));
+
 	}
 
 
@@ -72,7 +66,11 @@ public class BaseClass {
 			getDriver().quit();
 			tlocal.remove();
 		}
+
+
 	}
+
+
 
 	public String captureScreen(String tName) {
 		String timeStamp = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());

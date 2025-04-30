@@ -1,6 +1,6 @@
 package testcases;
 
-
+import utilities.ConfigPropertiesClass;
 import com.github.javafaker.Faker;
 import org.testng.annotations.Test;
 import pageobjects.AddEmployeePage;
@@ -11,9 +11,11 @@ import utilities.BaseClass;
 public class AddEmployees_TC extends BaseClass {
     @Test(groups = "Regression")
     public void verifyLogin() {
+
+        getDriver().get(ConfigPropertiesClass.getProperty("appURL"));
         LoginPage myPage = new LoginPage(getDriver());
-        myPage.setTxtEmail(p.getProperty("userName"));
-        myPage.setPassword(p.getProperty("password"));
+        myPage.setTxtEmail(ConfigPropertiesClass.getProperty("userName"));
+        myPage.setPassword(ConfigPropertiesClass.getProperty("password"));
         myPage.loginBtn();
     }
 
